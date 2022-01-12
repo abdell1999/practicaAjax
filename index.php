@@ -8,6 +8,9 @@ foreach (glob("controllers/*.php") as $filename) {
     include_once $filename;
 }
 
+//Prueba para depurar
+//include_once("controllers/employeesController.php");
+
 
 
 
@@ -26,8 +29,8 @@ if(!isset($_SESSION['type'])){
 
 if (!isset($_REQUEST['controller']) && !isset($_REQUEST['action'])) {
     
-        $controller = "reservations";
-        $action = "show";
+        $controller = "employees";
+        $action = "index";
 
     } else {
     
@@ -39,16 +42,6 @@ if (!isset($_REQUEST['controller']) && !isset($_REQUEST['action'])) {
     $nombreClase = ucfirst($controller)."Controller";
     $controller = new $nombreClase;
     
-    //$controller = new ResourcesController();
-    //$controller->show();
-
-    /** 
-    if(isset($_REQUEST['id'])){
-        $id = $_REQUEST['id'];
-    }else{
-        $id = null;
-    }
-*/  
     $controller->$action();
     
 

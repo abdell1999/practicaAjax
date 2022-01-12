@@ -16,7 +16,7 @@ class EmployeesController {
     public function index($data = null){
 
         $data['employees'] = $this->employees->get();
-        $this->view->show("resources/show", $data);
+        $this->view->show("employees/index", $data);
 
     }
 
