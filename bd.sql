@@ -1,0 +1,9 @@
+CREATE DATABASE practica_ajax;
+USE practica_ajax;
+CREATE TABLE employees (
+id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(45) NOT NULL,
+  lastname1 VARCHAR(45) NOT NULL,
+  lastname2 VARCHAR(45),
+  image VARCHAR(500) UNIQUE NOT NULL
+);
