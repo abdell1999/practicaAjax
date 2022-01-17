@@ -4,6 +4,7 @@ $employees = $data["employees"];
 
 //Script en el que haré que se cargue la imagen correspondiente al empleado cuando se haga click en ver imagen.
 echo "<script src='assets/js/cargarImagen.js'></script>";
+echo "<script src='assets/js/EliminarFila.js'></script>";
 
 
 
@@ -13,15 +14,16 @@ echo "<table class='table table-bordered grocery-crud-table table-hover' id='tab
                 <th>Nombre</th>
                 <th>Apellidos</th>
                 <th>Imagen</th>
+                <th>Acciones</th>
             </tr>
             </thead>
             <tbody>";
 
 
 foreach ($employees as $employee) {
-;
+  $id = $employee['id'];
 
-    echo "<tr>
+    echo "<tr id='$id'>
       <td>";
       
       echo $employee['name'];
@@ -31,16 +33,16 @@ foreach ($employees as $employee) {
       echo "</td>";
 
       echo "<td>";
-      $id = $employee['id'];
+      
       echo "<div id='container$id'>";
-      echo "<a id='$id' class='btn btn-dark verImagen' href='#''>Ver imagen</a>";
+      echo "<a class='btn btn-dark verImagen' href='#'>Ver imagen</a>";
 
       echo "</div>";
       echo "</td>";
 
      echo "<td>
       <a class='btn btn-warning' href='#'>Editar</a>";
-      echo "<a class='btn btn-danger' href='#''>Eliminar</a>";
+      echo "<a class='btn btn-danger eliminar' href='#''>Eliminar</a>";
 
 
       

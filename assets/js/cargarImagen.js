@@ -5,7 +5,7 @@ console.log("Se ha actualizado la cache correctamente, 4");
 //function cargarImagen(){
     $(document).ready(function() {
         $('.verImagen').click(function() {
-                var id = this.id;
+            var id = $(this).parent().parent().parent().attr("id");
                 //alert(id);
                 $.get('index.php?controller=Ajax&action=cargarImagen', 
                       {id: id }, 
