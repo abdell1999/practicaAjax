@@ -19,5 +19,14 @@ class Employees
     }
 
 
+    public function cargarImagen($id) {
+        $result = DB::dataQuery("SELECT * FROM employees WHERE id = '$id'");
+        foreach ($result as $row) {
+            $image = $row["image"];
+        }
+        return $image;
+    }
+
+
 
 }

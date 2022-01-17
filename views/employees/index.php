@@ -32,10 +32,10 @@ foreach ($employees as $employee) {
 
       echo "<td>";
       $id = $employee['id'];
-      echo "<div id='$id'>";
-      echo "<a class='btn btn-dark' href='#''>Ver imagen</a>";
+      echo "<div id='container$id'>";
+      echo "<a id='$id' class='btn btn-dark verImagen' href='#''>Ver imagen</a>";
 
-      echo "";
+      echo "</div>";
       echo "</td>";
 
      echo "<td>
@@ -51,4 +51,4 @@ foreach ($employees as $employee) {
   echo "</tbody>";
   
   
-echo "</table></div>";
+echo "</table>";
