@@ -28,5 +28,13 @@ class Employees
     }
 
 
+    public function eliminarFila($id){
+
+        $result = DB::dataManipulation("DELETE FROM employees WHERE id = '$id'"); 
+
+        return $result;
+    }
+
+
 
 }
